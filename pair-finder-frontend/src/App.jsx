@@ -23,8 +23,9 @@ function App() {
     formData.append("datePattern", datePattern);
 
     try {
+      const API_URL = window.location.origin;
       const response = await fetch(
-        "http://localhost:8080/api/pair-finder/upload",
+        API_URL+"/api/pair-finder/upload",
         {
           method: "POST",
           body: formData,
